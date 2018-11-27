@@ -1,1 +1,16 @@
 # Just create any Type and query you'd like!
+type Message {
+  text: String!
+}
+
+type Query {
+  oneMessage: Message!
+}
+
+input newBookInput {
+  name: String!
+}
+
+type Mutation {
+  newBook(input: newBookInput): Message!
+}
